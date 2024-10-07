@@ -1,7 +1,7 @@
-# Simple Go Struct Method and Mutation
+# Struct Package Example
 
 ### Overview
-This Go program demonstrates the use of struct and struct methods in the form of a separated package. The struct and its method needed to be imported from a package of its own. 
+The GO program in this repository is basically the same as the one in [struct_method_mutation_example](https://github.com/pkx8326/struct_method_mutation_example) demonstrates the use of struct and struct methods in the form of a separated package. The struct and its method needed to be imported from a package of its own. 
 
 The program features the use of pointers with structs and struct methods to display and overwrite/clear (mutate) the data in the original struct without unnecessarily occupying extra memory spaces. The features to display/clear data were written in a way that they are methods of the struct created in this program. 
 
@@ -19,9 +19,11 @@ When run, the program will present the user with 4 choices which include Input d
 Except for the choice #4, the program will ask if the user wants to continue to perform another tasks (any among the 4 choices) after finishing each task. The user will confirm this question by inputting "Y" or "N" (case-insensitive). The program will continue to work until the user input "N" or "n".
 
 ### Code structrue
-The program is divided into 2 main parts: the main program codes and the functions which include the function to display the menu, function for getting information from the user and store it in a struct, function to display the information, and function to clear the information in the created struct. 
+The program is divided into 2 main parts: the main program codes in the main.go file and the struct and its methods in the student.go package file. The code in the main.go file also divided further into 2 main parts: the main program code and basic functions that displays the program menu and a helper function to control the flow of the program after each chosen choice of operation. 
 
-Each function will be called according to the chosen choice. Once the user completes inputting information, the functions that displays and clears the information will get the original struct pointer as their argument and read/modify the original struct (created by the function that gets user input) directly to prevent unnecessary momory usage.
+The struct methods in the student package include a function to take user input and store the information in the created struct, and methods to display and clear the stored infromation from the struct. 
+
+Each function and method will be called and executed according to the chosen choice. Once the user completes inputting information, the struct method that displays and clears the information will get the struct pointer as their argument and read/modify the original struct (created by the function that gets user input) directly to prevent unnecessary momory usage.
 
 ### Program flow
 The program flow is shown as the following numbered list:
